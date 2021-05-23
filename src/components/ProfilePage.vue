@@ -19,7 +19,11 @@
     </nav>
     <div class="gallery-info-toggle">
       hide info
-      <span class="gallery-info-toggle-btn"></span>
+      <a 
+        @click="state.hideInfo = !state.hideInfo" 
+        :class="{ enabled: state.hideInfo }"
+        class="gallery-info-toggle-btn">
+      </a>
     </div>
   </div>
   <div class="gallery">
@@ -29,7 +33,9 @@
 
 <script setup>
 import { reactive } from 'vue'
-const state = reactive({ count: 0 })
+const state = reactive({ 
+  hideInfo: true 
+})
 </script>
 
 <style scoped>
@@ -77,9 +83,12 @@ const state = reactive({ count: 0 })
   display: inline-block;
   width: 24px;
   height: 14px;
-  background: #000;
+  background: #b7b7b7;
   border-radius: 8px;
   position: relative;
+}
+.gallery-info-toggle-btn.enabled {
+  background: #000;
 }
 .gallery-info-toggle-btn::before {
   content: '';
@@ -89,6 +98,10 @@ const state = reactive({ count: 0 })
   height: 8px;
   position: absolute;
   top: 3px;
+  left: 3px;
+}
+.gallery-info-toggle-btn.enabled::before {
+  left: unset;
   right: 3px;
 }
 
