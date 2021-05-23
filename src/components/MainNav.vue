@@ -64,8 +64,22 @@ const toggleMenu = () => {
 .flyout-menu {
   position: absolute;
   top: 48px;
-  right: 16px;
-  border: 1px solid #000;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 420px) {
+  .flyout-menu {
+    position: absolute;
+    left: unset;
+    bottom: unset;
+    top: 48px;
+    right: 16px;
+    border: 1px solid #000;
+  }
 }
 .flyout-menu-block {
   padding: 16px;
@@ -74,11 +88,15 @@ const toggleMenu = () => {
   border-bottom: 1px solid #000;
   min-width: 224px;
 }
+.explore-block {
+  flex-grow: 1;
+}
 .profile-block {
   background: #000;
   color: #fff;
   flex-direction: row;
   align-items: center;
+  flex-shrink: 1;
 }
 .unsync {
   display: flex;
