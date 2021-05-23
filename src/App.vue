@@ -14,9 +14,6 @@ import ProfilePage from './components/ProfilePage.vue'
 </script>
 
 <style>
-.app-container {
-  max-width: 865px;
-}
 html, body {
   margin: 0;
   padding: 0;

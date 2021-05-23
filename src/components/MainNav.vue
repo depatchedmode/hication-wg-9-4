@@ -62,6 +62,7 @@ const toggleMenu = () => {
 }
 
 .flyout-menu {
+  background: #fff;
   position: absolute;
   top: 48px;
   left: 0; 
