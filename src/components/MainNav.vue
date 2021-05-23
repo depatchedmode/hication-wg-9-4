@@ -14,15 +14,15 @@
   </nav>
   <div class="flyout-menu" v-if="state.menuOpen">
     <div class="flyout-menu-block create-block">
-      <a>Create OBJKT</a>
-      <a>My profile</a>
-      <a>My collection</a>
+      <a class="menu-link"><b>Create OBJKT</b></a>
+      <a class="menu-link">My profile</a>
+      <a class="menu-link">My collection</a>
     </div>
     <div class="flyout-menu-block explore-block">
-      <a>Explore OBJKTs</a>
-      <a>Galleries</a>
-      <a>Help Center</a>
-      <a>About hicetnunc</a>
+      <a class="menu-link"><b>Explore OBJKTs</b></a>
+      <a class="menu-link">Galleries</a>
+      <a class="menu-link">Help Center</a>
+      <a class="menu-link">About hicetnunc</a>
     </div>
     <div class="flyout-menu-block profile-block">
       <a class="avatar"></a>
@@ -87,6 +87,9 @@ const toggleMenu = () => {
   flex-direction: column;
   border-bottom: 1px solid #000;
   min-width: 224px;
+}
+.menu-link + .menu-link {
+  margin-top: 16px;
 }
 .explore-block {
   flex-grow: 1;
